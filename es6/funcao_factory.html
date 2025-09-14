@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'Unica',
+            aro: 12,
+            pedalar() { console.log('pedalando...')}
+        }
+
+        console.log(Bicicleta1)
+
+        let BicicletaFactory = function(cor, marcha, aro){
+            return {
+                cor,
+                marcha,
+                aro,
+                pedalar() { console.log('pedalando...')}
+            }
+
+        } 
+
+        let Bicicleta2 = BicicletaFactory('preta', 'dupla', 20)
+
+        console.log(Bicicleta2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

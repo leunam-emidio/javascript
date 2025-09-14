@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        
+        let produto = {
+            descricao: 'Notebook',
+            preco: 280000,
+            detalhes:{
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        //let { descricao, preco} = produto
+        
+        //let { descricao: d, preco: p} = produto
+
+        //let { descricao: d, preco: p, desconto} = produto
+
+        //let { descricao: d, preco: p, desconto= 7} = produto
+
+        let { descricao: d, preco: p = 240000, desconto= 7} = produto
+        console.log(d, p, desconto)
+        
+        let { detalhes: {fabricante: f, modelo: m= 'não informado'}} = produto
+        console.log(f, m)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

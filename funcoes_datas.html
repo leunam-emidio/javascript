@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var data = new Date()
+
+        //document.write(data.getDate()+'/'+data.getMonth()+'/'+data.getFullYear()+' '+data.getHours()+':'+data.getMinutes())
+
+        /*
+        //Adicionar e remover dias
+        document.write(data.toString())
+        data.setDate(data.getDate()-1)
+        document.write('<hr>')
+        document.write(data.toString())
+
+        document.write('<br><br><hr>')
+        
+        //Adicionar e remover meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth()-1)
+        document.write('<hr>')
+        document.write(data.toString())
+        
+        document.write('<br><br><hr>')
+        
+        //Adicionar e remover anos
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear()+1)
+        document.write('<hr>')
+        document.write(data.toString())
+        */
+
+        // 15/01/2017
+        var data1 = new Date(2017, 0, 15)
+        // 23/02/2017
+        var data2 = new Date(2017, 1, 23)
+
+        document.write(data1.toString())
+        document.write('<hr>')
+        document.write(data2.toString())
+
+        document.write('<br><br><hr>')
+
+        //Converter as datas para algo que podemos calcular
+        document.write(data1.getTime())
+        document.write('<hr>')
+        document.write(data2.getTime())
+        //1 de janeiro 1970
+        document.write('<hr>')
+
+        //Encotrar a qtd de milisegundo entre a data1 e a data2
+        var mlseg_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(mlseg_datas)
+        document.write('<hr>')
+        
+        // 1 dia tem 24 horas, cada hora tem 60 minutos, cada minuto tem 60 segundos e cada segundo tem 1000 milisegundos
+
+        //Quantos milisegundos tem um dia?
+        var mlseg_dia = 1*24*60*60*1000
+        document.write('1 dia tem '+mlseg_dia+' milisegundos')
+        document.write('<br><br><hr>')
+        document.write('A diferença entre as data1 e data2 é de '+Math.ceil(mlseg_datas / mlseg_dia)+' dias')
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

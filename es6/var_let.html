@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     <script type="text/babel">
+       
+       //3 escopos: global, funcao, bloco
+
+       
+      /*  function x(){
+        
+        console.log('Escopo da função '+serie)
+        if(true){
+            console.log('Escopo do bloco '+serie)
+        }
+       }
+
+       
+
+       if(true){
+        var serie = 'Prison Break'
+        x()
+        console.log('Escopo do bloco '+serie)
+       }
+
+       console.log('Escopo global '+serie)
+       */
+
+      let serie = 'friend'
+
+      {
+        let serie = 'Strong Girl'
+        console.log(serie)
+      }
+
+      console.log(serie)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

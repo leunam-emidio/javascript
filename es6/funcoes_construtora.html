@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        let Carro = function(){
+            this.cor = 'Amarelo'
+            this.modelo = 'chevelle'
+            this.velocidadeAtual = 0
+            this.velocidadeMaxima = 500
+
+            this.acelerar = function(){
+                //this.velocidadeAtual += 10
+
+                let velocidade = this.getVelocidadeAtual() + 10
+                this.setVelocidadeAtual(velocidade)
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidadeAtual
+            }
+
+            this.setVelocidadeAtual = function(velocidade){
+                this.velocidadeAtual = velocidade
+            } 
+
+        }
+
+        let carro = new Carro()
+        carro.acelerar()
+        carro.acelerar()
+        carro.acelerar()
+        console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

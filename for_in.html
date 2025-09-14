@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="'pt-br'">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+        //var lista_nomes = Array('Tinesa', 'Ito', 'Otniel', 'Nato', 'Luquenia')
+
+        var lista_convidados = Array()
+
+        lista_convidados[10] = 'Tinesa'
+        lista_convidados['a'] = 'Nato'
+        lista_convidados[true] = 'Luquenia'
+        lista_convidados[false] = 'Otniel'
+        lista_convidados[100] = 'Ito'
+
+        console.log(lista_convidados)
+
+        for(var i in lista_convidados){
+            console.log('Indice '+i+' Valor '+lista_convidados[i])
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

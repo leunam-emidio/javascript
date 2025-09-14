@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script> //type="text/babel"
+        //paradigma de oo
+        class Cadeira{
+            constructor(qtd_pernas, giratorias, cor){
+                this.qtd_pernas = qtd_pernas
+                this.giratorias = giratorias
+                this.cor = cor
+            }
+
+            girarCadeira(){
+                if(this.giratorias === true){
+                    console.log('girou')
+                }else{
+                    console.log('cadeira não é giratória')
+                }
+            }
+        }
+
+        let cadeiras = []
+
+        cadeiras.push(new Cadeira(4, false, 'azul'))
+        cadeiras.push(new Cadeira(1, true, 'vermelha'))
+
+        console.log(cadeiras)
+        cadeiras[1].girarCadeira()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

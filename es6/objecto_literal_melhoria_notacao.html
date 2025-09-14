@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+        let nome = 'Oriom'
+        let idade = 19
+        let sexo = 'Masculino'
+        let proficao = 'Programador'
+
+        let objecto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            proficao: proficao,
+            exibirResumo: function (){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.proficao}`)
+            }
+        }
+
+        console.log(objecto)
+        objecto.exibirResumo()
+
+
+        let objecto2 = {
+            nome,
+            idade,
+            sexo,
+            proficao,
+            exibirResumo(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.proficao}`)
+            }
+        }
+
+        console.log(objecto2)
+        objecto.exibirResumo()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
