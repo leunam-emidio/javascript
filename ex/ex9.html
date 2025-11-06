@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex9</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt()
+        let tamanho = num.length
+        let vetor = []
+        for(let i = 0; i<tamanho; i++){
+            vetor.push(num[tamanho-i-1])
+        }
+        let numI = vetor.join('')
+        if(num == numI){
+            document.write('É palindromo')
+        }else{
+            document.write('Não é palindromo')
+        }
+    </script>
+</body>
+
+</html>

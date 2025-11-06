@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex5</title>
+</head>
+<body>
+    <script>
+        let vetorP = []
+        let vetorI = []
+        for(let i=0; i<11; i++){
+            let num = Math.floor(Math.random()*100)
+            console.log(num)
+
+            if(num%2==0 && num != 0){
+                vetorP.push(num)
+            }else{
+                vetorI.push(num)
+            }
+        }
+        document.write(`Vetor par ${vetorP}`)
+        document.write(`<br>Vetor impar ${vetorI}`)
+    </script>
+</body>
+</html>

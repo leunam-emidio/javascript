@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        input {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <input type="button" value="adicionar" onclick="adicionar()">
+    <script>
+        var body = document.querySelector('#body')
+        function adicionar() {
+            console.log('oi')
+            let div = document.createElement('div')
+            let a = Math.random() * 255
+            let b = Math.random() * 255
+            let c = Math.random() * 255
+
+            div.style.width = '100%'
+            div.style.height = '100vh'
+            div.style.backgroundColor = `rgb(${a}, ${b}, ${c})`
+
+
+            body.appendChild(div)
+
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

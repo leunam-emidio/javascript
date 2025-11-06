@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button id="btn" onclick="resultado()">load</button>
+    <p></p>
+
+    <script>
+        function resultado(){
+            let n1 = document.querySelector('#num1').value
+            let n2 = document.querySelector('#num2').value
+           let s1 = 0
+           let s2 = 0
+           for(let i=1; i<n1; i++){
+              if(n1%i==0){
+                  s1+=i
+              }
+           }
+           
+           for(let i=1; i<n2; i++){
+              if(n2%i==0){
+                  s2+=i
+              }
+           }
+            if(n1==s2 && n2==s1){
+                document.querySelector('p').innerHTML = n1+' e '+n2+' saõ um numero perfifo'
+                
+            }else{
+                document.querySelector('p').innerHTML = n1+' e '+n2+' não são um numero perfeito' 
+                
+            }
+       }
+    </script>
+</body>
+</html>

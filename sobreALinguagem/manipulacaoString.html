@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de String</title>
+</head>
+<body>
+    <script>
+        // Acessar caracteres
+        let texto = 'Olá'
+        console.log(texto[0]) 
+        console.log(texto.charAt(1))
+
+        //Tamanho da string
+        console.log(texto.length)
+
+        // Concatenar
+
+        //Maiuscula e minuscula
+        console.log(texto.toUpperCase())
+        console.log(texto.toLowerCase())
+
+        // Subtring e fatiamento
+        let palavra= 'Programar'
+        console.log(palavra.substring(0, 4)) //prog
+        console.log(palavra.slice(4)) //ramar
+
+        //Substituir conteúdo
+        let frase = 'Eu gosto de Python'
+        frase.replace('Python', 'JavaScript')
+        console.log(frase)
+
+        //Verificar conteudo
+        console.log(frase.includes('Eu'))
+        console.log(frase.startsWith('Python'))
+        console.log(frase.endsWith('Script'))
+        console.log(frase.indexOf('E'))
+
+        //Dividir strings
+        let nomes = 'Ana, João, Lucas'
+        let lista = nomes.split(',') // ['Ana', 'João', 'Lucas']
+        console.log(lista)
+
+        // Remover espaços
+        let espaco = ' texto '
+        espaco.trim() //'texto'
+        console.log(espaco)
+    </script>
+</body>
+</html>

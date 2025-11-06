@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+    <style>
+        .girar{
+            animation: girar 2s infinite;
+        }
+
+        @keyframes girar{
+           from{ 
+            transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="texto">
+    <script>
+        let texto = document.querySelector('#texto')
+        
+        texto.addEventListener('input', () =>{
+            let num = texto.value
+            
+            for(let i=0; i<num.length; i++){
+                if(num[i] == '5'){
+                    let resultado = document.createElement('span').innerHTML = '5'
+                    console.log('oi')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #080707ba;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        form {
+            background-color: cadetblue;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 10px;
+        }
+
+        input {
+            outline: none;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Informe o nome:</label>
+        <input type="text" id="input">
+        <input type="button" value="Ver" onclick="AlterarNome()">
+        <label for="">O nome digitado foi:</label>
+        <p id="nomeAlt"></p>
+        <p id="qtdVogais">O total de vogais no nome digitado é </p>
+    </form>
+
+    <script>
+        function AlterarNome() {
+            let nome = document.querySelector('#input').value
+            let nomeAlt = document.querySelector('#nomeAlt')
+            let nVogais = document.querySelector('#qtdVogais')
+            let qtdVogais = 0
+
+            nomeAlt.innerHTML = ''
+            nVogais.innerHTML = 'O total de vogais no nome digitado é '
+            for (let i = 0; i < nome.length; i++) {
+                let caracter = nome[i].toLowerCase()
+                console.log('oi')
+                if (caracter == 'a' || 
+                    caracter == 'e' || 
+                    caracter == 'i' || 
+                    caracter == 'o' || 
+                    caracter == 'u'){
+                    qtdVogais++
+                    nomeAlt.innerHTML += '<u>' + nome[i] + '</u>'
+                    console.log('entrei')
+                }else{
+                    nomeAlt.innerHTML += nome[i]
+                }
+            }
+            nVogais.innerHTML += qtdVogais
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex8</title>
+</head>
+<body>
+    <script>
+        let frase = 'Python é melhor que JavaScript'
+        let vFrase = frase.split(' ')
+        let tamanho = vFrase.length
+        for(let i=0; i< 5; i++){
+            let palavras = []
+            let excluido = []
+            for(;;){
+                let p = Math.floor(Math.random()*tamanho)
+                
+                console.log(excluido)
+                if(excluido.includes(p)){
+                    console.log('já foi incluido')
+                }else{
+                    let palavra = vFrase[p]
+                    palavras.push(palavra)
+                    excluido.push(p)
+                }
+                
+                if(palavras.length == tamanho){
+                    break
+                }
+            }
+            let novaF = palavras.join(' ')
+            document.write(`${novaF} <br>`)
+            console.log(palavras)
+        }
+    </script>
+</body>
+</html>

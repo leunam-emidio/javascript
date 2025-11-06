@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let cont = 0
+        let n_neg = 0
+        let qtd_p = 0
+        let qtd_n = 0
+        let s_neg = 0
+        while(true){
+            let num = parseInt(prompt('Digite um numero: '))
+            console.log(num)
+            //Numeros negativos e condicao de parada
+            if(num < 0){
+                s_neg+=num
+                if(n_neg == 0){
+                    n_neg = num
+                    cont++
+                }else if(num == n_neg){
+                    cont++
+                }else if(num != n_neg){
+                    cont = 0
+                    n_neg = num
+                    cont++
+                }
+                
+            }
+
+            if(num == n_neg && cont == 3){
+                break
+            }
+
+            //Numeros primos
+            let cont_d = 0
+            for(let i=1; i<= num; i++){
+                if(num%i==0 && num !=0){
+                    cont_d++
+                }
+            }
+            if(cont_d == 2){
+                qtd_p++
+            }
+
+            //Numeros neutros
+            if(num == 0 || num == 1){
+                qtd_n++
+            }
+
+        }
+        document.write(`A qtd de numeros primos é ${qtd_p}`)
+        document.write(`<br> O quintuplo da qtd de numeros neutros é ${5*qtd_n}`)
+        document.write(`<br> A soma dos numeros negativos é ${s_neg}`)
+    </script>
+</body>
+</html>

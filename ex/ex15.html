@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex15</title>
+</head>
+<body>
+    <script>
+        for(;;){
+            var  vetor = prompt('Digite 15 numeros separados por espaço:').split(' ')
+
+            if(vetor.length == 5){
+                break
+            }
+        }
+        let maiorN = 0
+        for(i in vetor){
+            if(vetor[i]>maiorN){
+                maiorN = vetor[i]
+            }
+        }
+        for(i in vetor){
+            vetor[i] /= maiorN
+        }
+        document.write('O vetor depois do calculo: '+vetor)
+    </script>
+</body>
+</html>

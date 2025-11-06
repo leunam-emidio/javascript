@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex13</title>
+</head>
+
+<body>
+    <script>
+        let texto = prompt()
+        let tamanho = texto.length
+        let vetor = []
+        for(let i = 0; i<tamanho; i++){
+            vetor.push(texto[tamanho-i-1])
+        }
+        let textoI = vetor.join('')
+        document.write(textoI)
+    </script>
+</body>
+
+</html>

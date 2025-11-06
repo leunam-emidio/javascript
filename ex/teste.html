@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        div{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="texto"></div>
+    <script>
+        let texto = document.querySelector('#texto')
+       // texto.classList.add('background-color: red')
+
+       // texto.style.transfom = "rotate(30deg)"
+
+        texto.style.cssText = "transform: rotate(60deg); transition: 1s;"
+
+    </script>
+</body>
+</html>

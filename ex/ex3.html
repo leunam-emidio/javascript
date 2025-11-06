@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        let num = prompt()
+        let somaN = 0
+        let vetor = num.split(';')
+        console.log(vetor)
+
+        // Soma dos numeros digitados
+        for(i in vetor){
+            vetor[i] = parseInt(vetor[i])
+            somaN += vetor[i]
+        }
+        console.log(vetor)
+        document.write(`A soma dos numeros digitados é ${somaN}`)
+
+        // Fatorial dos numeros somados
+        function factorialRec(n){
+            if(n<0){
+                return 'invalido'
+            }
+            if(n=== 0 || n=== 1){
+                return 1
+            }
+
+            return n * factorialRec(n-1)
+        }
+
+        for(i in vetor){
+            document.write(`<br>O factorial de ${vetor[i]} é ${factorialRec(vetor[i])}`)
+        }
+    </script>
+</body>
+</html> 
